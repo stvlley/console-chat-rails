@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Console Chat</h1>
+  <p>Chatrooms / Direct Messages</p>
+  <p>If you can't reach me. You're not trying.</p>
+  <% if current_user %>
+        <%= link_to "Start Chatting", rooms_path %>
+ 
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+</div>
